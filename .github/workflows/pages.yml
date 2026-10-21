@@ -23,6 +23,7 @@ jobs:
     if: github.event_name != 'pull_request'
     needs: test
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
@@ -38,3 +39,4 @@ jobs:
           path: public
       - id: deployment
         uses: actions/deploy-pages@v4
+
